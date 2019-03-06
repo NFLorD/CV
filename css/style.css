@@ -23,6 +23,10 @@
     }
 }
 
+body{
+    overflow-x: hidden;
+}
+
 header{
     float: left;
 }
@@ -49,12 +53,19 @@ header{
     border-bottom-right-radius: 80px;
     padding: 5px 5px 0px 40px;
     position: relative;
+    transform: translateX(-70vw);
+    transition: transform 0.7s ease-out;
 }
 
 main{
     clear: both;
     width: 85%;
     margin: auto;
+}
+
+main #pres>ul>li{
+    transform: translateX(100vw);
+    transition: transform 0.7s ease-out;
 }
 
 footer{
@@ -74,6 +85,16 @@ footer a i{
     color: firebrick;
 }
 
+#makeItRain{
+    vertical-align: middle !important;
+}
+
+footer a#print{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
 body{
     background: rgba(178,34,34,1);
     background: -moz-linear-gradient(left, rgba(178,34,34,1) 0%, rgba(178,34,34,1) 15%, rgba(178,34,34,1) 18%, rgba(184,39,39,1) 35%, rgba(201,58,58,1) 66%, rgba(241,111,92,1) 100%);
@@ -83,6 +104,7 @@ body{
     background: -ms-linear-gradient(left, rgba(178,34,34,1) 0%, rgba(178,34,34,1) 15%, rgba(178,34,34,1) 18%, rgba(184,39,39,1) 35%, rgba(201,58,58,1) 66%, rgba(241,111,92,1) 100%);
     background: linear-gradient(to right, rgba(178,34,34,1) 0%, rgba(178,34,34,1) 15%, rgba(178,34,34,1) 18%, rgba(184,39,39,1) 35%, rgba(201,58,58,1) 66%, rgba(241,111,92,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b22222', endColorstr='#f16f5c', GradientType=1 );
+    
     font-family: 'Roboto', sans-serif;
 }
 
@@ -110,6 +132,7 @@ section#pres ul li div{
     border-bottom-left-radius: 30px;
     border: none;
     box-shadow: none;
+    transition: transform 1.5s;
 }
 
 section#pres ul li div[class="collapsible-header"]{
@@ -118,6 +141,24 @@ section#pres ul li div[class="collapsible-header"]{
 
 section#pres ul li div ul{
     list-style-type: disc;
+}
+
+ul i{
+    color: rgb(69, 160, 130);
+}
+
+footer ul,
+footer ul li div{
+    border-top-left-radius: 30px !important;
+    border-bottom-left-radius: 30px !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: rgb(69, 160, 130);
+}
+
+footer ul{
+    width: 10% !important;
+    margin-left: auto !important;
 }
 
 small a img{
@@ -129,6 +170,15 @@ small{
     position: absolute;
     top: 0;
     right: 150px;
+}
+
+#cardContent{
+    width: 100%;
+    translate: width 1s;
+}
+
+#cardContent.hide{
+    width: 0;
 }
 
 @media screen and (max-width: 1500px){
